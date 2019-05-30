@@ -74,8 +74,6 @@ drop sequence t_fileSeq_seq;
 
 select * from title_img;
 
-
-
 --------------------------------------------------------------------------------
 
 create table payment(
@@ -92,24 +90,3 @@ select * from payment;
 
 commit;
 
---------------------------------------------------------------------------------
-
-create table ufile(
-    fileSeq number primary key,
-    fileName varchar(300) not null,
-    oriFileName varchar(300) not null,
-    filePath varchar(300) not null,
-    fileSize number not null
-);
-drop table ufile;
-
-create sequence file_seq
-start with 1
-increment by 1
-nocache
-nomaxvalue;
-drop sequence file_seq;
-
-select * from ufile;
-
-commit;
